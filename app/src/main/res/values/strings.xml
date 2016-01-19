@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CodeBreakerGame_withGradle</string>
+    <string name="title_activity_first">Шифр Цезаря</string>
+
+    <string name="view_navigation_open">open</string>
+    <string name="view_navigation_close">close</string>
 </resources>

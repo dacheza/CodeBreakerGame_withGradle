@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- пока не используется (а может и вообще не понадобиться)-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search"
+        android:title="search"
+        android:orderInCategory="1"
+        android:icon="@mipmap/ic_launcher"
+        app:showAsAction="ifRoom">
+        <!-- orderInCategory - указывает на то место которое будет занимать в списке
+             showAsAction="ifRoom" - чтобы item был не в выпадющем меню
+             @mipmap/ic_magnify_white_24d - так выглядит ссылка именно на картинку, а не на векторное
+             изображение magnify.xml (@drawable/magnify)(получается в версиях ниже 21 нужна будет
+             все таки ссылка на иконку?, т.е. еще один файл menu возможно нужен будет для более
+             ранних версий)
+        -->
+    </item>
+</menu>

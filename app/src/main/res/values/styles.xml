@@ -1,11 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="AppDefault" parent="AppTheme">
         <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorControlNormal">@color/colorWhite</item>
+         <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:windowActionBar">false</item>  эта строчка не нужна, т.к.
+        новый стиль уже NoActionBar, т.е. экшенбара уже не должно быть и так-->
+    </style>
+    <!-- код до 6 урока выглядел так:
+        <style name="AppTheme" parent="AppTheme.Base" />
+
+        <style name="AppTheme.Base" parent="Theme.AppCompat">
+
+            <item name="colorPrimary">@color/colorPrimary</item>
+            <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+            &lt;!&ndash;     <item name="colorAccent">@color/colorAccent</item>&ndash;&gt;
+            <item name="android:windowActionBar">false</item>
+        </style>-->
+</resources>
+
+
+<!-- 1 версия(рабочая)
+
+<resources>
+
+    &lt;!&ndash; Base application theme. &ndash;&gt;
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-</resources>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    &lt;!&ndash; чтобы на старых версиях андроид, кнопка не была слишком высоко(в старых версиях косяк)&ndash;&gt;
+    <style name="floating_button">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginBottom">0dp</item>
+    </style>
+
+</resources>-->

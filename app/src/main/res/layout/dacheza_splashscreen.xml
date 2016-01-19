@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+    <!-- зеленый фон layout   android:background="#198f59"-->
+    <!--
+        1 группа из кросс
+            17b07f  сине зел
+            198f59  темн зел
+            fcc516  желтый
+            ebe8ec  белый
+            2b2a28  серый
+        2 группа из кросс
+
+        Green
+        500  #4CAF50
+        50   #E8F5E9
+        100  #C8E6C9
+        200  #A5D6A7
+        300  #81C784
+        400  #66BB6A
+        500  #4CAF50
+        600  #43A047
+        700  #388E3C
+        800  #2E7D32
+        900  #1B5E20
+        A100 #B9F6CA
+        A200 #69F0AE
+        A400 #00E676
+        A700 #00C853
+
+        android:shadowDx="3.0"
+        android:shadowDy="3.0"
+        android:shadowColor="@android:color/black"
+        android:shadowRadius="5.0"
+    -->
+
+    <com.romainpiel.shimmer.ShimmerTextView
+        android:id="@+id/shimmer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center"
+        android:text="  Code \nBreaker"
+        android:textColor="#444"
+        android:textSize="50sp" />
+
+    <!--
+    тут другой вариант сплэшскрина зелено-желтый
+    <TextView
+        android:id="@+id/dachezaSplashscreenLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#fcc516"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:text="Splashscreen"
+        android:shadowColor="#2b2a28"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="5" />
+    -->
+</FrameLayout>

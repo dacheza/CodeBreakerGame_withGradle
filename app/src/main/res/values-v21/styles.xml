@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--1 версия(рабочая)
+
+<resources>>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    &lt;!&ndash;  в новых версиях нужно отступ &ndash;&gt;
+    <style name="floating_button">
+        <item name="android:layout_margin">16dp</item>
+    </style>
+</resources>
+-->
+
+<resources>
+
+<style name="AppDefault" parent="AppTheme">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorControlNormal">@color/colorWhite</item>
+    <item name="android:statusBarColor">@android:color/transparent</item><!--эта строчка тоже для
+        прозрачности над статус баром(в котором указывается зарядка батареи и другие значки) при
+        появлении навигеэшен вью -->
+    <!--     <item name="colorAccent">@color/colorAccent</item>-->
+    <!--<item name="android:windowActionBar">false</item>  эта строчка не нужна, т.к.
+    новый стиль уже NoActionBar, т.е. экшенбара уже не должно быть и так-->
+</style>
+</resources>

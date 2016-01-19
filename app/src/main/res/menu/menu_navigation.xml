@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/newGameItemNavigationMenu"
+        android:orderInCategory="1"
+        android:title="Новая игра" />
+    <!--android:icon="@mipmap/ic_message_text"-->
+
+    <item
+        android:id="@+id/loadAnotherSkinItemNavigationMenu"
+        android:orderInCategory="2"
+        android:title="Переключиться на другой скин" />
+
+    <item
+        android:id="@+id/loadGameItemNavigationMenu"
+        android:orderInCategory="3"
+        android:title="Загрузить" />
+
+    <item
+        android:id="@+id/saveGameItemNavigationMenu"
+        android:orderInCategory="4"
+        android:title="Сохранить" />
+
+    <item
+        android:id="@+id/optionsItemNavigationMenu"
+        android:orderInCategory="5"
+        android:title="Настройки" />
+
+    <item
+        android:id="@+id/exitItemNavigationMenu"
+        android:orderInCategory="5"
+        android:title="Выход" />
+
+    <!--
+    android:title="@string/menu_item_notification"
+    android:icon="@mipmap/ic_message_text"
+    -->
+</menu>
