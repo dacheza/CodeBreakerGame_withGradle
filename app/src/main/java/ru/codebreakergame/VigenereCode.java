@@ -4,34 +4,33 @@ package ru.codebreakergame;
  * Created by citlalatonac on 1/18/16.
  */
 public class VigenereCode {
-    public String alphabet(String chiperWord, String text){
-        String textWithoutOtherSymbol = text.toLowerCase().replaceAll("(?U)\\W","");
-        char[] originalText = textWithoutOtherSymbol.toCharArray();
-        String chiperText = "";
+    public String vigenereChiperMaker(String chiperWord, String text) {
+
         int firstSymbol = 'а';
         int lastSymbol = 'я';
-        int codeChiperWord = 0;
-        int charCode = 0;
 
+        /** Обработка входящего текста */
+        String textWithoutOtherSymbol = text.replaceAll("(?U)\\W", "").toLowerCase();
+        char[] originalText = textWithoutOtherSymbol.toCharArray();
+
+        String chiperText = "";
         char[] chiperWordArray = chiperWord.toCharArray();
         int countAlphabet = 0;
 
-        for(char c : originalText){
-            codeChiperWord = chiperWordArray[countAlphabet];
-            charCode = c;
-            int step = codeChiperWord - firstSymbol;
-
-            if (charCode < lastSymbol - step)
-                chiperText = chiperText + (char)(charCode + step);
+        for (char c : originalText) {
+            int step = chiperWordArray[countAlphabet] - firstSymbol + 1;
+            int charCode = c;
+            if (charCode <= lastSymbol - step)                          //Проверка на границу - для перехода с конца в начало алфавита
+                chiperText = chiperText + (char) (charCode + step);
             else
-                chiperText = chiperText + (char)(firstSymbol + (charCode - lastSymbol + step));
+                chiperText = chiperText + (char) (firstSymbol + (charCode - lastSymbol + step - 1));
 
-            if (countAlphabet < chiperWordArray.length)
+            if (countAlphabet != chiperWordArray.length - 1)
                 countAlphabet++;
             else
-                countAlphabet=0;
+                countAlphabet = 0;
         }
 
-        return null;
+        return chiperText;
     }
 }
