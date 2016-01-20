@@ -12,19 +12,18 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton"
-        android:layout_marginBottom="137dp"
+        android:id="@+id/imageButtonContinue"
         android:contentDescription=""
         android:src="@drawable/ic_continue"
-        android:layout_alignParentBottom="true"
+        android:clickable="false"
+        android:layout_above="@+id/imageButtonNewGame"
         android:layout_centerHorizontal="true"/>
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton2"
+        android:id="@+id/imageButtonNewGame"
+        android:src="@drawable/ic_newgame"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="64dp"
-        android:src="@drawable/ic_newgame"/>
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>
