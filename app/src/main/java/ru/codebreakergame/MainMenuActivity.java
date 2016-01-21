@@ -5,7 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.ImageButton;
+import android.widget.ImageView;
+
 
 public class MainMenuActivity extends Activity implements View.OnClickListener{
 
@@ -17,20 +18,20 @@ public class MainMenuActivity extends Activity implements View.OnClickListener{
         /** Скрытие статус бара */
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        ImageButton ibContinue = (ImageButton) findViewById(R.id.imageButtonContinue);
-        ImageButton ibNewGame = (ImageButton) findViewById(R.id.imageButtonNewGame);
+        ImageView ivContinue = (ImageView) findViewById(R.id.imageViewContinue);
+        ImageView ivNewGame = (ImageView) findViewById(R.id.imageViewNewGame);
 
-        ibContinue.setOnClickListener(this);
-        ibNewGame.setOnClickListener(this);
+        ivContinue.setOnClickListener(this);
+        ivNewGame.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         Intent intent;
         switch (v.getId()){
-            case R.id.imageButtonContinue:
+            case R.id.imageViewContinue:
                 break;
-            case R.id.imageButtonNewGame:
+            case R.id.imageViewNewGame:
                 intent = new Intent("ru.codebreakergame.action.newgame");
                 startActivity(intent);
                 break;
