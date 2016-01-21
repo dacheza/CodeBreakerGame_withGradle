@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 
-public class MainMenuActivity extends Activity implements View.OnClickListener{
+public class MainMenuActivity extends Activity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +24,11 @@ public class MainMenuActivity extends Activity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         Intent intent;
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.imageViewContinue:
                 break;
             case R.id.imageViewNewGame:
-                intent = new Intent("ru.codebreakergame.action.newgame");
+                intent = new Intent("ru.codebreakergame.action.newgamedialog");
                 startActivity(intent);
                 break;
         }
