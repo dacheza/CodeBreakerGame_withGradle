@@ -22,19 +22,9 @@
             android:name=".GameActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
-            <intent-filter>
-                <action android:name="ru.codebreakergame.action.newgame"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
         </activity>
-        <activity android:name=".DialogNewGameActivity"
+        <activity android:name=".DIalogNewGamePaperActivity"
             android:theme="@style/Theme.AppCompat.Dialog">
-            <intent-filter>
-                <action android:name="ru.codebreakergame.action.newgamedialog"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
         </activity>
     </application>
 

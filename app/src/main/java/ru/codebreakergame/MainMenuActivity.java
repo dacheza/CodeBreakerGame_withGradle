@@ -19,6 +19,7 @@ public class MainMenuActivity extends Activity implements View.OnClickListener {
 
         ivContinue.setOnClickListener(this);
         ivNewGame.setOnClickListener(this);
+
     }
 
     @Override
@@ -28,7 +29,7 @@ public class MainMenuActivity extends Activity implements View.OnClickListener {
             case R.id.imageViewContinue:
                 break;
             case R.id.imageViewNewGame:
-                intent = new Intent("ru.codebreakergame.action.newgamedialog");
+                intent = new Intent(this, DIalogNewGamePaperActivity.class);
                 startActivity(intent);
                 break;
         }
