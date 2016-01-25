@@ -1,8 +1,5 @@
-package ru.codebreakergame;
+package ru.codebreakergame.chipers;
 
-/**
- * Created by citlalatonac on 1/18/16.
- */
 public class VigenereCode {
     public String vigenereChiperMaker(String chiperWord, String text) {
 
@@ -17,6 +14,7 @@ public class VigenereCode {
         char[] chiperWordArray = chiperWord.toCharArray();
         int countAlphabet = 0;
 
+        /** Процесс шифрования */
         for (char c : originalText) {
             int step = chiperWordArray[countAlphabet] - firstSymbol + 1;
             int charCode = c;

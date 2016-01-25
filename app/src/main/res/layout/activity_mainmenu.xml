@@ -9,7 +9,7 @@
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
                 android:keepScreenOn="true"
-                tools:context=".MainMenuActivity">
+                tools:context=".activity.MainMenuActivity">
 
     <ImageView
         android:id="@+id/imageViewNewGame"
@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:src="@drawable/ic_newgame"
-        android:layout_marginBottom="97dp"
+        android:layout_marginBottom="80dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>
 

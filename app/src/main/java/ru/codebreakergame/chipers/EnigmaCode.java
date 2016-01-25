@@ -1,4 +1,4 @@
-package ru.codebreakergame;
+package ru.codebreakergame.chipers;
 
 import java.util.Map;
 

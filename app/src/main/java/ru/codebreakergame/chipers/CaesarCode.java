@@ -1,4 +1,4 @@
-package ru.codebreakergame;
+package ru.codebreakergame.chipers;
 
 public class CaesarCode {
 
@@ -12,7 +12,7 @@ public class CaesarCode {
 
         String chiperText = "";
 
-
+        /** Процесс шифрования */
         for (char c : originalText) {
             int charCode = c;
             if (charCode <= lastSymbol - step)                          //Проверка на границу - для перехода с конца в начало алфавита
