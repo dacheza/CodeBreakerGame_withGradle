@@ -16,9 +16,9 @@ import ru.codebreakergame.R;
 public class GameActivity extends Activity {
 
         LinearLayout linearLayout;
-        int[] c = new int[] { Color.YELLOW, Color.BLUE, Color.RED, Color.GRAY,
-                Color.GREEN, Color.CYAN, Color.LTGRAY, Color.WHITE, Color.DKGRAY,
-                Color.BLACK };
+        int[] c = new int[] { Color.TRANSPARENT, Color.TRANSPARENT, Color.TRANSPARENT, Color.TRANSPARENT,
+                Color.TRANSPARENT, Color.TRANSPARENT, Color.TRANSPARENT, Color.TRANSPARENT, Color.TRANSPARENT,
+                Color.TRANSPARENT };
 
         String[] cs = new String[] { "YELLOW", "BLUE", "RED", "GRAY", "GREEN",
                 "CYAN", "LTGRAY", "WHITE", "DKGRAY", "BLACK" };
@@ -29,11 +29,11 @@ public class GameActivity extends Activity {
             setContentView(R.layout.activity_game);
             RelativeLayout container = (RelativeLayout) findViewById(R.id.relative);
 
-            PSInfiniteScrollView scrollView = new PSInfiniteScrollView(this,new PSSize(120,120));
+            PSInfiniteScrollView scrollView = new PSInfiniteScrollView(this,new PSSize(90,90));
             for (int i = 0; i < 10; i++) {
                 MyCloneableView img = new MyCloneableView(GameActivity.this);
                 img.setId(i + 20);
-                img.setImageResource(R.drawable.ic_buttondialog_no);
+                img.setImageResource(R.drawable.ic_button_for_alphabet);
                 img.setScaleType(ImageView.ScaleType.FIT_XY);
                 img.setBackgroundColor(c[i]);
                 img.setTag(c[i]);
