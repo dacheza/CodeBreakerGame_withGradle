@@ -6,4 +6,5 @@
     <color name="colorBlueGreyMaterial">#607D8B</color>
     <color name="colorBlueGreyDarkMaterial">#455A64</color>
     <color name="colorTextMaterial">#212121</color>
+    <color name="colorVeryLightBlueGrayMaterial">#cfd8dc</color>
 </resources>
