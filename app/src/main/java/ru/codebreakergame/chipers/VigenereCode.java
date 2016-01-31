@@ -1,34 +1,38 @@
 package ru.codebreakergame.chipers;
 
-public class VigenereCode {
-    public String vigenereChiperMaker(String chiperWord, String text) {
+import java.util.ArrayList;
 
-        int firstSymbol = 'а';
-        int lastSymbol = 'я';
+public class VigenereCode extends CaesarCode{
 
-        /** Обработка входящего текста */
-        String textWithoutOtherSymbol = text.replaceAll("(?U)\\W", "").toLowerCase();
-        char[] originalText = textWithoutOtherSymbol.toCharArray();
+    ArrayList<String> keys = new ArrayList<>();
 
-        String chiperText = "";
-        char[] chiperWordArray = chiperWord.toCharArray();
+    public VigenereCode(){
+        keys.add("МКР");
+    }
+
+    public String codeMaker(String text){
+
+        text = textWithoutOtherSymbol(text);
+
+        char[] originalText = text.toCharArray();
+
+        String cipherText = "";
+        char[] cipherLetters = keys.get(0).toLowerCase().toCharArray();
+
         int countAlphabet = 0;
 
-        /** Процесс шифрования */
-        for (char c : originalText) {
-            int step = chiperWordArray[countAlphabet] - firstSymbol + 1;
-            int charCode = c;
-            if (charCode <= lastSymbol - step)                          //Проверка на границу - для перехода с конца в начало алфавита
-                chiperText = chiperText + (char) (charCode + step);
-            else
-                chiperText = chiperText + (char) (firstSymbol + (charCode - lastSymbol + step - 1));
+        for(char c : originalText){
+            int step = cipherLetters[countAlphabet] - firstSymbol;
 
-            if (countAlphabet != chiperWordArray.length - 1)
+            cipherLetter = alphabeticShift(c, step);
+            cipherText = cipherText + cipherLetter;
+
+            if (countAlphabet != cipherLetters.length - 1)              // Переход на следующую букву шифрслова
                 countAlphabet++;
             else
                 countAlphabet = 0;
         }
 
-        return chiperText;
+        return cipherText;
     }
 }
