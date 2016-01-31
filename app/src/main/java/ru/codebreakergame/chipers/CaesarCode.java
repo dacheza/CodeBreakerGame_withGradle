@@ -2,24 +2,50 @@ package ru.codebreakergame.chipers;
 
 public class CaesarCode {
 
-    public String codeCaesar(String text, int step) {
-        int firstSymbol = 'а';
-        int lastSymbol = 'я';
+    int firstSymbol = 'а';
+    int lastSymbol = 'я';
+    char cipherLetter;
+    int step;
 
-        /** Обработка входящего текста */
-        String textWithoutOtherSymbol = text.toLowerCase().replaceAll("(?U)\\W", "");
-        char[] originalText = textWithoutOtherSymbol.toCharArray();
+    Integer[] shifts = new Integer[]{1, 2, 3, 4, 5};
+    String[] otherSymbol = new String[]{" ", ".", ",", "!", "?", "'", ";", ":", "-", "_", "№", "#"};
 
-        String chiperText = "";
+    /**
+     * К сожалению с регулярным выражением приложение валится text.replaceAll("(?U)\\W", "")
+     */
+    public String textWithoutOtherSymbol(String text) {
 
-        /** Процесс шифрования */
-        for (char c : originalText) {
-            int charCode = c;
-            if (charCode <= lastSymbol - step)                          //Проверка на границу - для перехода с конца в начало алфавита
-                chiperText = chiperText + (char) (charCode + step);
-            else
-                chiperText = chiperText + (char) (firstSymbol + (charCode - lastSymbol + step - 1));
+        text = text.toLowerCase();
+        for (String symbol : otherSymbol) {
+            text = text.replace(symbol, "");
         }
-        return chiperText;
+        return text;
+    }
+
+    public char alphabeticShift(char letter, int step) {
+
+
+        int charCode = letter;
+        if (charCode <= lastSymbol - step)
+            letter = (char) (charCode + step);
+        else
+            letter = (char) (firstSymbol + (charCode - lastSymbol + step - 1));
+        return letter;
+
+    }
+
+    public String codeMaker(String text) {
+
+        step = shifts[1];
+        text = textWithoutOtherSymbol(text);
+        char[] originalText = text.toCharArray();
+
+        String cipherText = "";
+
+        for (char c : originalText) {
+            cipherLetter = alphabeticShift(c, step);
+            cipherText = cipherText + cipherLetter;
+        }
+        return cipherText;
     }
 }
