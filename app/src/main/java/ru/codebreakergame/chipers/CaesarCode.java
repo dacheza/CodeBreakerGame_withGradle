@@ -1,14 +1,9 @@
 package ru.codebreakergame.chipers;
 
-public class CaesarCode {
+public class CaesarCode implements AlphabeticCipherReplacement{
 
-    int firstSymbol = 'а';
-    int lastSymbol = 'я';
     char cipherLetter;
-    int step;
-
-    Integer[] shifts = new Integer[]{1, 2, 3, 4, 5};
-    String[] otherSymbol = new String[]{" ", ".", ",", "!", "?", "'", ";", ":", "-", "_", "№", "#"};
+    String[] otherSymbol = new String[]{" ", ".", ",", "!", "?", "'", ";", ":", "-", "_", "№", "#", ")", "("};
 
     /**
      * К сожалению с регулярным выражением приложение валится text.replaceAll("(?U)\\W", "")
@@ -23,20 +18,12 @@ public class CaesarCode {
     }
 
     public char alphabeticShift(char letter, int step) {
-
-
-        int charCode = letter;
-        if (charCode <= lastSymbol - step)
-            letter = (char) (charCode + step);
-        else
-            letter = (char) (firstSymbol + (charCode - lastSymbol + step - 1));
+        letter = (char) (letter + step);
+        letter = whatIf(letter);
         return letter;
-
     }
 
-    public String codeMaker(String text) {
-
-        step = shifts[1];
+    public String codeMaker(String text, int step) {
         text = textWithoutOtherSymbol(text);
         char[] originalText = text.toCharArray();
 
@@ -47,5 +34,17 @@ public class CaesarCode {
             cipherText = cipherText + cipherLetter;
         }
         return cipherText;
+    }
+
+    public char whatIf(char letter) {
+        if (letter > lastSymbol) {
+            int step = letter - lastSymbol;
+            letter = (char) (firstSymbol + step - 1);
+        }
+        if (letter < firstSymbol) {
+            int step = firstSymbol - letter;
+            letter = (char) (lastSymbol - step + 1);
+        }
+        return letter;
     }
 }

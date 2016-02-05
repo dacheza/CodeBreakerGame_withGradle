@@ -1,23 +1,20 @@
 package ru.codebreakergame.chipers;
 
-import java.util.ArrayList;
-
 public class VigenereCode extends CaesarCode{
 
-    ArrayList<String> keys = new ArrayList<>();
+    String key;
 
-    public VigenereCode(){
-        keys.add("МКР");
+    public VigenereCode(String key) {
+        this.key = key;
     }
 
     public String codeMaker(String text){
 
         text = textWithoutOtherSymbol(text);
-
         char[] originalText = text.toCharArray();
 
         String cipherText = "";
-        char[] cipherLetters = keys.get(0).toLowerCase().toCharArray();
+        char[] cipherLetters = key.toLowerCase().toCharArray();
 
         int countAlphabet = 0;
 
