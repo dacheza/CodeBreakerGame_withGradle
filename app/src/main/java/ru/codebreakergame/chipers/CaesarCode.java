@@ -8,6 +8,7 @@ public class CaesarCode implements AlphabeticCipherReplacement{
     /**
      * К сожалению с регулярным выражением приложение валится text.replaceAll("(?U)\\W", "")
      */
+    @Override
     public String textWithoutOtherSymbol(String text) {
 
         text = text.toLowerCase();
@@ -17,6 +18,7 @@ public class CaesarCode implements AlphabeticCipherReplacement{
         return text;
     }
 
+    @Override
     public char alphabeticShift(char letter, int step) {
         letter = (char) (letter + step);
         letter = whatIf(letter);
@@ -36,7 +38,7 @@ public class CaesarCode implements AlphabeticCipherReplacement{
         return cipherText;
     }
 
-    public char whatIf(char letter) {
+    public static char whatIf(char letter) {
         if (letter > lastSymbol) {
             int step = letter - lastSymbol;
             letter = (char) (firstSymbol + step - 1);
