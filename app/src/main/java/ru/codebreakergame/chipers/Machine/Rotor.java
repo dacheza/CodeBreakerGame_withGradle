@@ -4,7 +4,7 @@ import java.util.Map;
 
 /**
  * Ротор это подвижный диск со связями
- * <p/>
+ *
  * По сути выполняет замену букв
  */
 public class Rotor {
@@ -19,6 +19,7 @@ public class Rotor {
         // До отражателя
         if (!reflection) {
             String oneLetter = String.valueOf(letter);
+
             for (Map.Entry<Character, Character> shift : rotor.entrySet()) {
                 String connectLetter = String.valueOf(shift.getKey());
                 if (oneLetter.equals(connectLetter))
@@ -27,6 +28,7 @@ public class Rotor {
         } else {
             // После отражателя
             String oneLetter = String.valueOf(letter);
+
             for (Map.Entry<Character, Character> shift : rotor.entrySet()) {
                 String connectLetter = String.valueOf(shift.getValue());
                 if (oneLetter.equals(connectLetter))
@@ -38,32 +40,26 @@ public class Rotor {
 
     public static int[] rotateRotor (int[] rotorCount) {
 
-        int first = rotorCount[0];
-        int second = rotorCount[1];
-        int third = rotorCount[2];
-
         // Движение первого ротора
-        first = first + 1;
+        rotorCount[0] = rotorCount[0] + 1;
 
         // Движение второго ротора
-        if (first == 32){
-            second =  second + 1;
-            first = 0;
+        if (rotorCount[0] == 32){
+            rotorCount[1] =  rotorCount[1] + 1;
+            rotorCount[0] = 0;
         }
 
         // Движение третьего ротора
-        if (second == 32){
-            second = 0;
-            third = third + 1;
-            second = second + 1;
+        if (rotorCount[1] == 32){
+            rotorCount[1] = 0;
+            rotorCount[2] = rotorCount[2] + 1;
+            rotorCount[1] = rotorCount[1] + 1;
         }
 
-        if (third == 32)
-            third = 0;
+        // Проверка на полный оборот третьего ротора
+        if (rotorCount[2] == 32)
+            rotorCount[2] = 0;
 
-        int[] rotated = new int[]{first, second, third};
-
-
-        return rotated;
+        return rotorCount;
     }
 }

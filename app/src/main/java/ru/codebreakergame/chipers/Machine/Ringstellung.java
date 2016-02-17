@@ -4,7 +4,7 @@ import static ru.codebreakergame.chipers.CaesarCode.whatIf;
 
 /**
  * Кольца это еще один способ запудрить мозги дешифровщикам
- * <p/>
+ *
  * Сдвигают букву в лево на разницу шагов между первой буквой и буквой кольца
  */
 public class Ringstellung {
@@ -15,8 +15,7 @@ public class Ringstellung {
         this.firstSymbol = firstSymbol;
     }
 
-    public char ringShift(char letter, char ring, boolean reflection) {
-
+    public char ringShift(char letter, char ring) {
         int shift = ring - firstSymbol;
         letter = (char) (letter + shift);
         letter = whatIf(letter);
