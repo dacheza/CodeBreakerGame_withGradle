@@ -10,39 +10,54 @@ import static ru.codebreakergame.chipers.Machine.Rotor.rotateRotor;
 
 /**
  * Энигма!!!
- *
- * Вот такая схема: КП 1Р 2Р 3Р О 3Р^(-1) 2Р^(-1) 1Р^(-1)
- *
+ * <p/>
+ * Вот такая схема: КП 1Р 2Р 3Р О 3Р^(-1) 2Р^(-1) 1Р^(-1) КП
+ * <p/>
  * Сначала текст проходит через коммутационную панель, потом через наши карты(роторы) - меняем по ключу
- *      потом идет переворот с помощью рефлектора
- *      после рефлектора опять проходят роторы, только ищем буквы по значению (роторы идут в обратном направлении)
- *      и снова коммутационная панель
- *
- *      кольца просто сдвигают алфавит для каждого ротора
+ * потом идет переворот с помощью рефлектора
+ * после рефлектора опять проходят роторы, только ищем буквы по значению (роторы идут в обратном направлении)
+ * и снова коммутационная панель
+ * <p/>
+ * кольца просто сдвигают алфавит для каждого ротора
+ * <p/>
+ * Больше информации https://ru.wikipedia.org/wiki/%D0%AD%D0%BD%D0%B8%D0%B3%D0%BC%D0%B0
  */
 
 public class EnigmaMachine extends CaesarCode {
 
     char[] rotorsPosition;
+    int[] rotorsLocation;
+
+    // Карта коммутационной панели
     Map<Character, Character> pairLetters;
+
     char[] rings;
+
+    // Счетчик поворота роторов
     static int[] rotorCount = new int[]{0, 0, 0};
+
     int stepOfShift;
     boolean reflection = false;
+    int countForPrint = 0;
 
-    public EnigmaMachine(char[] rotorsPosition, Map<Character, Character> pairLetters, char[] rings) {
+    public EnigmaMachine(char[] rotorsPosition, int[] rotorsLocation, Map<Character, Character> pairLetters, char[] rings) {
         this.rotorsPosition = rotorsPosition;
+        this.rotorsLocation = rotorsLocation;
         this.pairLetters = pairLetters;
         this.rings = rings;
     }
 
-    // Роторы
+    // Карты роторов (связи)
     static Map<Character, Character> firstRotor = new TreeMap<>();
     static Map<Character, Character> secondRotor = new TreeMap<>();
     static Map<Character, Character> thirdRotor = new TreeMap<>();
+
+    // Роторы
     Rotor rotorOne = new Rotor(firstRotor);
     Rotor rotorTwo = new Rotor(secondRotor);
     Rotor rotorThree = new Rotor(thirdRotor);
+
+    // Лист с роторами
     static ArrayList<Rotor> rotors = new ArrayList<>();
 
     // Отражатель
@@ -163,21 +178,27 @@ public class EnigmaMachine extends CaesarCode {
         thirdRotor.put('я', 'ь');
     }
 
-    private void rotorsCollection() {
-        rotors.add(rotorOne);
-        rotors.add(rotorTwo);
-        rotors.add(rotorThree);
+    private void rotorsLocations() {
+        for (int location : rotorsLocation) {
+            if (location == 1)
+                rotors.add(rotorOne);
+            if (location == 2)
+                rotors.add(rotorTwo);
+            if (location == 3)
+                rotors.add(rotorThree);
+        }
     }
 
     public String codeMaker(String text) {
 
+        String cipherText = "";
+
         PlugBoard plugBoard = new PlugBoard(pairLetters);  //Коммутационная панель
-        rotorsCollection();
+        rotorsLocations();
 
         // Убираем другие символы
         text = textWithoutOtherSymbol(text);
         char[] originalText = text.toCharArray();
-        String cipherText = "";
 
         // Превращаем побуквенно
         for (char letter : originalText) {
@@ -204,9 +225,11 @@ public class EnigmaMachine extends CaesarCode {
             letter = plugBoard.plugs(letter);
             reflection = false;
 
+            // Поворот роторов
             rotorCount = rotateRotor(rotorCount);
 
-            cipherText = cipherText + letter;
+            // Стиль
+            cipherText = print(cipherText, letter);
         }
         return cipherText;
     }
@@ -221,7 +244,7 @@ public class EnigmaMachine extends CaesarCode {
         tempLetter = whatIf(tempLetter);
 
         // Сдвиг осуществляемый кольцами
-        tempLetter = ringstellung.ringShift(tempLetter, rings[step], reflection);
+        tempLetter = ringstellung.ringShift(tempLetter, rings[step]);
 
         // Разница между первым ротором и первой буквой алфавита или ротором и ротором + кольца
         if (step == 0)
@@ -238,5 +261,15 @@ public class EnigmaMachine extends CaesarCode {
         letter = whatIf(letter);
 
         return letter;
+    }
+
+    public String print(String cipherText, char letter) {
+        cipherText = cipherText + letter;
+        countForPrint++;
+        if (countForPrint == 4) {
+            cipherText = cipherText + " ";
+            countForPrint = 0;
+        }
+        return cipherText.toUpperCase();
     }
 }
