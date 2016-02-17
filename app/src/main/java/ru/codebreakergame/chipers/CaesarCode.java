@@ -1,6 +1,12 @@
 package ru.codebreakergame.chipers;
 
-public class CaesarCode implements AlphabeticCipherReplacement{
+import ru.codebreakergame.chipers.interfaces.AlphabeticCipherReplacement;
+
+/**
+ * Шифр Цезаря это банальный сдвиг символов текста на несколько позиций вдоль алфавита
+ */
+
+public class CaesarCode implements AlphabeticCipherReplacement {
 
     char cipherLetter;
     String[] otherSymbol = new String[]{" ", ".", ",", "!", "?", "'", ";", ":", "-", "_", "№", "#", ")", "("};
@@ -39,10 +45,14 @@ public class CaesarCode implements AlphabeticCipherReplacement{
     }
 
     public static char whatIf(char letter) {
+
+        // Проверка на превыщение значения последнего символа алфавита
         if (letter > lastSymbol) {
             int step = letter - lastSymbol;
             letter = (char) (firstSymbol + step - 1);
         }
+
+        // Проверка на значение меньше первого символа алфавита
         if (letter < firstSymbol) {
             int step = firstSymbol - letter;
             letter = (char) (lastSymbol - step + 1);
