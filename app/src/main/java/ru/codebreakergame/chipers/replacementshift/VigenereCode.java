@@ -1,4 +1,4 @@
-package ru.codebreakergame.chipers;
+package ru.codebreakergame.chipers.replacementshift;
 
 /**
  * Шифр Виженера состоит из последовательности нескольких шифров Цезаря с различными значениями сдвига

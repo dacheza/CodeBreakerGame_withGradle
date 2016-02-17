@@ -1,6 +1,4 @@
-package ru.codebreakergame.chipers;
-
-import ru.codebreakergame.chipers.interfaces.LanguageBarrier;
+package ru.codebreakergame.chipers.languagebarrier;
 
 public class NavajoBarrier implements LanguageBarrier {
 

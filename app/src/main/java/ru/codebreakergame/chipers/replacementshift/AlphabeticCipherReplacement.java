@@ -1,4 +1,4 @@
-package ru.codebreakergame.chipers.interfaces;
+package ru.codebreakergame.chipers.replacementshift;
 
 public interface AlphabeticCipherReplacement {
     int firstSymbol = 'а';

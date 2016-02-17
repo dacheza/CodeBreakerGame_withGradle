@@ -1,6 +1,4 @@
-package ru.codebreakergame.chipers;
-
-import ru.codebreakergame.chipers.interfaces.AlphabeticCipherReplacement;
+package ru.codebreakergame.chipers.replacementshift;
 
 /**
  * Шифр Цезаря это банальный сдвиг символов текста на несколько позиций вдоль алфавита

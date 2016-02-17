@@ -1,4 +1,4 @@
-package ru.codebreakergame.chipers.Machine;
+package ru.codebreakergame.chipers.replacementshift.machine;
 
 import java.util.Map;
 

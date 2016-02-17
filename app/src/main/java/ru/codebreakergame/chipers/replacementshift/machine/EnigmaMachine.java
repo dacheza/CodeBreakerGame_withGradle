@@ -1,12 +1,12 @@
-package ru.codebreakergame.chipers.Machine;
+package ru.codebreakergame.chipers.replacementshift.machine;
 
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
 
-import ru.codebreakergame.chipers.CaesarCode;
+import ru.codebreakergame.chipers.replacementshift.CaesarCode;
 
-import static ru.codebreakergame.chipers.Machine.Rotor.rotateRotor;
+import static ru.codebreakergame.chipers.replacementshift.machine.Rotor.rotateRotor;
 
 /**
  * Энигма!!!

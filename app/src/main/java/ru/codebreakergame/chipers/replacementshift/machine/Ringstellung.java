@@ -1,6 +1,6 @@
-package ru.codebreakergame.chipers.Machine;
+package ru.codebreakergame.chipers.replacementshift.machine;
 
-import static ru.codebreakergame.chipers.CaesarCode.whatIf;
+import static ru.codebreakergame.chipers.replacementshift.CaesarCode.whatIf;
 
 /**
  * Кольца это еще один способ запудрить мозги дешифровщикам
