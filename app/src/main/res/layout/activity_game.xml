@@ -20,301 +20,68 @@
         android:paddingTop="16dp"
         android:id="@+id/relativeLayout">
 
-        <HorizontalScrollView
-            android:id="@+id/horizontalScrollView"
+        <EditText
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:inputType="textCapCharacters"
+            android:maxLength="1"
+            android:id="@+id/editBeforeReplace" />
+
+        <EditText
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:inputType="textCapCharacters"
+            android:maxLength="1"
+            android:id="@+id/editAfterReplace"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/editBeforeReplace"
+            android:layout_toEndOf="@+id/editBeforeReplace" />
+
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:scrollbars="none">
+            android:text="Заменить"
+            android:id="@+id/replaceButton"
+            android:layout_alignTop="@+id/editAfterReplace"
+            android:layout_toLeftOf="@+id/fixButton"
+            android:layout_toStartOf="@+id/fixButton" />
 
-            <LinearLayout
-                android:id="@+id/layoutAlphaBet"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  А  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Б  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  В  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Г  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Д  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Е  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Ж  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  З  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  И  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Й  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  К  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Л  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  М  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Н  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  О  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  П  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_17"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Р  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_18"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  С  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_19"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Т  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_20"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  У  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_21"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Ф  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Х  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_23"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Ц  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_24"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Ч  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_25"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Ш  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_26"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Щ  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_27"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Ъ  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_28"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Ы  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_29"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Ь  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_30"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Э  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_31"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Ю  " />
-
-                <Button
-                    android:id="@+id/buttonAlphabetWord_32"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Я  " />
-            </LinearLayout>
-        </HorizontalScrollView>
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@color/colorVeryLightBlueGrayMaterial"
-        android:orientation="horizontal"
-        android:paddingBottom="6dp"
-        android:paddingLeft="6dp"
-        android:paddingRight="6dp"
-        android:paddingTop="6dp"
-        android:id="@+id/linearLayout">
-
-        <TextView
-            android:id="@+id/textViewPrevious"
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:text="Исправить"
+            android:id="@+id/fixButton"
+            android:layout_alignTop="@+id/replaceButton"
+            android:layout_toLeftOf="@+id/undoButton"
+            android:layout_toStartOf="@+id/undoButton" />
 
-        <TextView
-            android:id="@+id/textViewNext"
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/textViewPrevious"
-            android:layout_alignParentEnd="true"
+            android:text="Отменить"
+            android:id="@+id/undoButton"
+            android:layout_alignTop="@+id/fixButton"
             android:layout_alignParentRight="true"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_above="@+id/relativeLayout"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/linearLayout2">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Назад"
-            android:id="@+id/buttonUndo" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Стереть"
-            android:id="@+id/buttonCleanText" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Галочка"
-            android:id="@+id/buttonOkReplace" />
-
-    </LinearLayout>
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:paddingBottom="6dp"
-        android:paddingLeft="6dp"
-        android:paddingRight="6dp"
-        android:paddingTop="6dp"
-        android:layout_above="@+id/linearLayout2">
+        android:layout_above="@+id/relativeLayout">
 
         <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:scrollbars="none"
             android:id="@+id/scrollView" >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:id="@+id/textViewChiper"
-                android:layout_below="@+id/linearLayout"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:id="@+id/cipherTextView"
+                 />
         </ScrollView>
     </RelativeLayout>
 
