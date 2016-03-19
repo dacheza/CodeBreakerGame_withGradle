@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+     android:shareInterpolator="false">
+<!-- Движение вниз 3-го сверху элемента-->
+    <translate
+        android:fromXDelta="0%"
+        android:toXDelta="0%"
+        android:fromYDelta="50%"
+        android:toYDelta="75%"
+        android:duration="2000"
+        />
+    <!--
+        fromXDelta — начальное положение по X;
+        toXDelta — конечное положение по X;
+        fromYDelta — начальное положение по Y;
+        toYDelta — конечное положение по Y
+        Атрибуты должны быть в любом из следующих трёх форматов:
+
+        Абсолютное значение
+        Значения в процентах от -100% до 100%
+        Значения в процентах от -100%p до 100%p, где p указывает процент относительно его родителя.
+    -->
+</set>

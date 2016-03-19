@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- вариант если анимация для всех букв одан-->
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="2000"
+    android:fromXDelta="0%"
+    android:fromYDelta="0%"
+    android:toXDelta="0%"
+    android:toYDelta="100%" />
+    <!--
+        fromXDelta — начальное положение по X;
+        toXDelta — конечное положение по X;
+        fromYDelta — начальное положение по Y;
+        toYDelta — конечное положение по Y
+        Атрибуты должны быть в любом из следующих трёх форматов:
+
+        Абсолютное значение
+        Значения в процентах от -100% до 100%
+        Значения в процентах от -100%p до 100%p, где p указывает процент относительно его родителя.
+    -->
