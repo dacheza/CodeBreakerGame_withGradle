@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/real"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/bg_paper"
+    android:keepScreenOn="true"
+    tools:context=".activity.GameActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorBlueGreyDarkMaterial"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:id="@+id/relativeLayout">
+
+        <EditText
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:inputType="textCapCharacters"
+            android:maxLength="1"
+            android:id="@+id/editBeforeReplace" />
+
+        <EditText
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:inputType="textCapCharacters"
+            android:maxLength="1"
+            android:id="@+id/editAfterReplace"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/editBeforeReplace"
+            android:layout_toEndOf="@+id/editBeforeReplace" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Заменить"
+            android:id="@+id/replaceButton"
+            android:layout_alignTop="@+id/editAfterReplace"
+            android:layout_toLeftOf="@+id/fixButton"
+            android:layout_toStartOf="@+id/fixButton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Исправить"
+            android:id="@+id/fixButton"
+            android:layout_alignTop="@+id/replaceButton"
+            android:layout_toLeftOf="@+id/undoButton"
+            android:layout_toStartOf="@+id/undoButton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Отменить"
+            android:id="@+id/undoButton"
+            android:layout_alignTop="@+id/fixButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relativeLayout">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:id="@+id/scrollView" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/cipherTextView"
+                 />
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

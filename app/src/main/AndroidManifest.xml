@@ -9,15 +9,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SplashScreenActivity">
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".FirstActivity"
-            android:label="@string/title_activity_first">
-            <!-- android:theme="@style/AppTheme.NoActionBar" -->
-        </activity>
     </application>
+
 </manifest>
