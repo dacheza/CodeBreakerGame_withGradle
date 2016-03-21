@@ -62,8 +62,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.floating_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar
-                        .make(coordinator, "ответ правильный", Snackbar.LENGTH_SHORT)
+                Snackbar.make(coordinator, "ответ правильный", Snackbar.LENGTH_SHORT)
                         .setAction(/*R.string.snackbar_action*/"ок", yes)
                         .show();
             }
@@ -159,7 +158,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void initCaesarCipherTable() {
-        // инициация шифра цезаря
+        // инициализация шифра цезаря
         initEditText();
         initLetters();
         initUpAndDownButtons();
@@ -212,7 +211,6 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         Animation аnimationDown_3 = AnimationUtils.loadAnimation(this, R.anim.caesar_cipher_letter_down_3);
         Animation аnimationDown_4 = AnimationUtils.loadAnimation(this, R.anim.caesar_cipher_letter_down_4);
         Animation аnimationDown_100 = AnimationUtils.loadAnimation(this, R.anim.caesar_cipher_letter_down);
-
 
         textView1.startAnimation(аnimationDown_100);
         textView2.startAnimation(аnimationDown_100);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TableRow
         android:id="@+id/tableRow0"
@@ -11,17 +11,17 @@
         <ImageButton
             android:id="@+id/buttonUp00"
             android:background="@android:color/black"
-            android:src="@android:drawable/arrow_up_float"/>
+            android:src="@android:drawable/arrow_up_float" />
 
         <ImageButton
             android:id="@+id/buttonUp01"
             android:background="@android:color/black"
-            android:src="@android:drawable/arrow_up_float"/>
+            android:src="@android:drawable/arrow_up_float" />
 
         <ImageButton
             android:id="@+id/buttonUp02"
             android:background="@android:color/black"
-            android:src="@android:drawable/arrow_up_float"/>
+            android:src="@android:drawable/arrow_up_float" />
     </TableRow>
 
     <TableRow
@@ -31,21 +31,21 @@
 
         <EditText
             android:id="@+id/editText10"
-            android:textSize="30sp"
             android:gravity="center"
-            android:text="  4" />
+            android:text="  4"
+            android:textSize="30sp" />
 
         <EditText
             android:id="@+id/editText11"
-            android:textSize="30sp"
             android:gravity="center"
-            android:text="  4" />
+            android:text="  4"
+            android:textSize="30sp" />
 
         <EditText
             android:id="@+id/editText12"
-            android:textSize="30sp"
             android:gravity="center"
-            android:text="  4" />
+            android:text="  4"
+            android:textSize="30sp" />
     </TableRow>
 
     <TableRow
@@ -56,17 +56,17 @@
         <ImageButton
             android:id="@+id/buttonDown10"
             android:background="@android:color/black"
-            android:src="@android:drawable/arrow_down_float"/>
+            android:src="@android:drawable/arrow_down_float" />
 
         <ImageButton
             android:id="@+id/buttonDown11"
             android:background="@android:color/black"
-            android:src="@android:drawable/arrow_down_float"/>
+            android:src="@android:drawable/arrow_down_float" />
 
         <ImageButton
             android:id="@+id/buttonDown12"
             android:background="@android:color/black"
-            android:src="@android:drawable/arrow_down_float"/>
+            android:src="@android:drawable/arrow_down_float" />
 
     </TableRow>
 
@@ -77,51 +77,50 @@
 
         <TextView
             android:id="@+id/textView30"
-            android:textSize="30sp"
             android:gravity="center"
-            android:text="й" />
+            android:text="й"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView31"
-            android:textSize="30sp"
             android:gravity="center"
-            android:text="н" />
+            android:text="н"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView32"
-            android:textSize="30sp"
             android:gravity="center"
-            android:text="с" />
+            android:text="с"
+            android:textSize="30sp" />
     </TableRow>
-
 
     <TableRow
         android:id="@+id/tableRow4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <!-- todo разобраться как использовать android:elevation и тени -->
         <TextView
             android:id="@+id/textView40"
-            android:textSize="30sp"
             android:elevation="6dp"
             android:gravity="center"
+            android:text="к"
             android:textColor="#ADFF2F"
-            android:text="к" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView41"
-            android:textSize="30sp"
             android:gravity="center"
+            android:text="о"
             android:textColor="#ADFF2F"
-            android:text="о" />
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView42"
-            android:textSize="30sp"
             android:gravity="center"
+            android:text="т"
             android:textColor="#ADFF2F"
-            android:text="т" />
+            android:textSize="30sp" />
     </TableRow>
 
     <TableRow
@@ -131,21 +130,21 @@
 
         <TextView
             android:id="@+id/textView50"
-            android:textSize="30sp"
             android:gravity="center"
-            android:text="л" />
+            android:text="л"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView51"
-            android:textSize="30sp"
             android:gravity="center"
-            android:text="п" />
+            android:text="п"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView52"
-            android:textSize="30sp"
             android:gravity="center"
-            android:text="у" />
+            android:text="у"
+            android:textSize="30sp" />
     </TableRow>
 
     <TableRow
@@ -155,21 +154,21 @@
 
         <TextView
             android:id="@+id/textView60"
-            android:textSize="30sp"
             android:gravity="center"
-            android:text="м" />
+            android:text="м"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView61"
-            android:textSize="30sp"
             android:gravity="center"
-            android:text="р" />
+            android:text="р"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView62"
-            android:textSize="30sp"
             android:gravity="center"
-            android:text="ф" />
+            android:text="ф"
+            android:textSize="30sp" />
     </TableRow>
 
     <TableRow
@@ -179,20 +178,20 @@
 
         <TextView
             android:id="@+id/textView70"
-            android:textSize="30sp"
             android:gravity="center"
-            android:text="н" />
+            android:text="н"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView71"
-            android:textSize="30sp"
             android:gravity="center"
-            android:text="с" />
+            android:text="с"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/textView72"
-            android:textSize="30sp"
             android:gravity="center"
-            android:text="х" />
+            android:text="х"
+            android:textSize="30sp" />
     </TableRow>
 </TableLayout>
