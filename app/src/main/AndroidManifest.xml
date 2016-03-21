@@ -17,6 +17,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ChoiceSkinActivity"
+            android:label="@string/title_activity_first">
+            <!-- android:theme="@style/AppTheme.NoActionBar" -->
+        </activity>
+        <activity
+            android:name=".FirstActivity"
+            android:label="@string/title_activity_first">
+            <!-- android:theme="@style/AppTheme.NoActionBar" -->
+        </activity>
+        <activity
+            android:name=".activity.GameActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+        </activity>
+        <activity android:name=".activity.DIalogNewGamePaperActivity"
+            android:theme="@style/Theme.AppCompat.Dialog">
+        </activity>
     </application>
 
 </manifest>

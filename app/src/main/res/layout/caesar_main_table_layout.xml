@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:id="@+id/tableRow0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/buttonUp00"
+            android:background="@android:color/black"
+            android:src="@android:drawable/arrow_up_float" />
+
+        <ImageButton
+            android:id="@+id/buttonUp01"
+            android:background="@android:color/black"
+            android:src="@android:drawable/arrow_up_float" />
+
+        <ImageButton
+            android:id="@+id/buttonUp02"
+            android:background="@android:color/black"
+            android:src="@android:drawable/arrow_up_float" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editText10"
+            android:gravity="center"
+            android:text="  4"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/editText11"
+            android:gravity="center"
+            android:text="  4"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/editText12"
+            android:gravity="center"
+            android:text="  4"
+            android:textSize="30sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/buttonDown10"
+            android:background="@android:color/black"
+            android:src="@android:drawable/arrow_down_float" />
+
+        <ImageButton
+            android:id="@+id/buttonDown11"
+            android:background="@android:color/black"
+            android:src="@android:drawable/arrow_down_float" />
+
+        <ImageButton
+            android:id="@+id/buttonDown12"
+            android:background="@android:color/black"
+            android:src="@android:drawable/arrow_down_float" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView30"
+            android:gravity="center"
+            android:text="й"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:gravity="center"
+            android:text="н"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:gravity="center"
+            android:text="с"
+            android:textSize="30sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- todo разобраться как использовать android:elevation и тени -->
+        <TextView
+            android:id="@+id/textView40"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:text="к"
+            android:textColor="#ADFF2F"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:gravity="center"
+            android:text="о"
+            android:textColor="#ADFF2F"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView42"
+            android:gravity="center"
+            android:text="т"
+            android:textColor="#ADFF2F"
+            android:textSize="30sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView50"
+            android:gravity="center"
+            android:text="л"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView51"
+            android:gravity="center"
+            android:text="п"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView52"
+            android:gravity="center"
+            android:text="у"
+            android:textSize="30sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView60"
+            android:gravity="center"
+            android:text="м"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView61"
+            android:gravity="center"
+            android:text="р"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView62"
+            android:gravity="center"
+            android:text="ф"
+            android:textSize="30sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView70"
+            android:gravity="center"
+            android:text="н"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView71"
+            android:gravity="center"
+            android:text="с"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView72"
+            android:gravity="center"
+            android:text="х"
+            android:textSize="30sp" />
+    </TableRow>
+</TableLayout>

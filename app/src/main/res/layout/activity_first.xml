@@ -58,6 +58,13 @@
                 layout="@layout/toolbar" />
         </android.support.design.widget.AppBarLayout>
 
+        <include
+            android:id="@+id/main_table_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            layout="@layout/caesar_main_table_layout" />
+
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/floating_button"
             android:layout_width="wrap_content"
