@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ru.codebreakergame">
+    package="ru.codebreakergame.activity">
 
     <application
         android:allowBackup="true"
@@ -13,13 +13,12 @@
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".ChoiceSkinActivity"
-            android:label="@string/title_activity_first">
+            android:label="">
             <!-- android:theme="@style/AppTheme.NoActionBar" -->
         </activity>
         <activity
@@ -28,12 +27,15 @@
             <!-- android:theme="@style/AppTheme.NoActionBar" -->
         </activity>
         <activity
-            android:name=".activity.GameActivity"
+            android:name=".GameActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
         </activity>
-        <activity android:name=".activity.DIalogNewGamePaperActivity"
+        <activity android:name=".DIalogNewGamePaperActivity"
             android:theme="@style/Theme.AppCompat.Dialog">
+        </activity>
+        <activity android:name=".MainMenuActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
         </activity>
     </application>
 

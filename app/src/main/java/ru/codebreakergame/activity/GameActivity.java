@@ -11,8 +11,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import ru.codebreakergame.R;
 import ru.codebreakergame.chipers.replacementshift.CaesarCode;
+
+//import ru.codebreakergame.R;
 
 public class GameActivity extends Activity implements View.OnClickListener, View.OnKeyListener {
 

@@ -11,8 +11,8 @@ import android.view.animation.AnimationUtils;
 import com.romainpiel.shimmer.Shimmer;
 import com.romainpiel.shimmer.ShimmerTextView;
 
-import ru.codebreakergame.ChoiceSkinActivity;
-import ru.codebreakergame.R;
+
+//import ru.codebreakergame.R;
 
 /*
  * здесь внизу ссылка на мерцающий

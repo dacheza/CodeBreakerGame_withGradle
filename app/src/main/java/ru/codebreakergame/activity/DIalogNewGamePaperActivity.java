@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import ru.codebreakergame.R;
+//import ru.codebreakergame.R;
 
 public class DIalogNewGamePaperActivity extends Activity implements View.OnClickListener {
 

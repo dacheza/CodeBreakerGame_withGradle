@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import ru.codebreakergame.R;
+//import ru.codebreakergame.R;
 
 public class ChoiceSkinActivity extends Activity implements View.OnClickListener {
     Button buttonCitlalatonacSkin;
@@ -28,6 +28,9 @@ public class ChoiceSkinActivity extends Activity implements View.OnClickListener
         Intent intent = null;
         switch (v.getId()) {
             case R.id.buttonCitlalatonacSkin:
+                intent = new Intent(ChoiceSkinActivity.this, MainMenuActivity.class);
+                startActivity(intent);
+                finish();
                 break;
             case R.id.buttonDachezaSkin:
                 intent = new Intent(ChoiceSkinActivity.this, FirstActivity.class);
