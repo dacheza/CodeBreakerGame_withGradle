@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import ru.codebreakergame.R;
 import ru.codebreakergame.chipers.replacementshift.CaesarCode;
 
-public class GameActivity extends Activity implements View.OnClickListener, View.OnKeyListener {
+public class CaesarActivity extends Activity implements View.OnClickListener, View.OnKeyListener {
 
     EditText beforeReplace;
     EditText afterReplace;
@@ -28,11 +28,11 @@ public class GameActivity extends Activity implements View.OnClickListener, View
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
+        setContentView(R.layout.activity_caesar);
 
         CaesarCode gameOfCaesar = new CaesarCode();
 
-        beforeReplace = (EditText) findViewById(R.id.editBeforeReplace);
+        beforeReplace = (EditText) findViewById(R.id.editCipherWord);
         afterReplace = (EditText) findViewById(R.id.editAfterReplace);
 
         beforeReplace.setOnKeyListener(this);
@@ -47,8 +47,8 @@ public class GameActivity extends Activity implements View.OnClickListener, View
         cipherTextView.setTextColor(Color.BLACK);
 
         replaceTextButton = (Button) findViewById(R.id.replaceButton);
-        fixTextButton = (Button) findViewById(R.id.fixButton);
-        undoTextButton = (Button) findViewById(R.id.undoButton);
+        fixTextButton = (Button) findViewById(R.id.okButton);
+        undoTextButton = (Button) findViewById(R.id.cancelButton);
 
         replaceTextButton.setOnClickListener(this);
         fixTextButton.setOnClickListener(this);
@@ -64,10 +64,10 @@ public class GameActivity extends Activity implements View.OnClickListener, View
             case R.id.replaceButton:
                 replaceText();
                 break;
-            case R.id.fixButton:
+            case R.id.okButton:
                 fixText();
                 break;
-            case R.id.undoButton:
+            case R.id.cancelButton:
                 undoText();
                 break;
         }
