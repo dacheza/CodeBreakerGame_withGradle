@@ -47,7 +47,7 @@ public class VigenereCode extends CaesarCode {
                 step = -step;
 
             cipherLetter = alphabeticShift(c, step);
-            cipherText = cipherText + cipherLetter;
+            cipherText = print(cipherText, cipherLetter);
 
             // Переход на следующий символ шифрслова
             if (countAlphabet != cipherLetters.length - 1)

@@ -231,7 +231,7 @@ public class EnigmaMachine extends CaesarCode {
             // Стиль
             cipherText = print(cipherText, letter);
         }
-        return cipherText;
+        return cipherText.toUpperCase();
     }
 
     @Override
@@ -263,13 +263,5 @@ public class EnigmaMachine extends CaesarCode {
         return letter;
     }
 
-    public String print(String cipherText, char letter) {
-        cipherText = cipherText + letter;
-        countForPrint++;
-        if (countForPrint == 4) {
-            cipherText = cipherText + " ";
-            countForPrint = 0;
-        }
-        return cipherText.toUpperCase();
-    }
+
 }

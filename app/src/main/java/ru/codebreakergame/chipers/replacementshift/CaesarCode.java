@@ -7,6 +7,7 @@ package ru.codebreakergame.chipers.replacementshift;
 public class CaesarCode implements AlphabeticCipherReplacement {
 
     char cipherLetter;
+    int countForPrint = 0;
     String[] otherSymbol = new String[]{" ", ".", ",", "!", "?", "'", ";", ":", "-", "_", "№", "#", ")", "("};
 
     /**
@@ -37,7 +38,7 @@ public class CaesarCode implements AlphabeticCipherReplacement {
 
         for (char c : originalText) {
             cipherLetter = alphabeticShift(c, step);
-            cipherText = cipherText + cipherLetter;
+            cipherText = print(cipherText, cipherLetter);
         }
         return cipherText;
     }
@@ -56,5 +57,15 @@ public class CaesarCode implements AlphabeticCipherReplacement {
             letter = (char) (lastSymbol - step + 1);
         }
         return letter;
+    }
+
+    public String print(String cipherText, char letter) {
+        cipherText = cipherText + letter;
+        countForPrint++;
+        if (countForPrint == 4) {
+            cipherText = cipherText + " ";
+            countForPrint = 0;
+        }
+        return cipherText;
     }
 }
