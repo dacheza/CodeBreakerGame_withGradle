@@ -8,12 +8,12 @@ package ru.codebreakergame.chipers.replacementshift;
  * Используются именно те шифры из таблицы, которые указаны в шифрслове
  * Например НЯША - будем использовать алфавиты начинающиеся на Н, Я, Ш и А.
  * Шифровка циклична, на каждый символ шифрслова идет символ оригинального текста
- *
+ * <p/>
  * ЭТО ПРИМЕРНЫЙ ТЕКСТ
  * НЯШ АНЯШАНЯША НЯШАН
- *
+ * <p/>
  * Как видно Э будет идти по сдвигу Н, то есть на 13 позиций, Т по Я это сдвиг на 31 позицию и т.д.
- *
+ * <p/>
  * В нашем случае все немного проще, мы просто считаем сдвиг каждого символа шифрслова относительно оригинального алфавита
  * Оригинальный алфавит начинается на А, вот это мы и отнимаем
  * Н - А = 13
@@ -23,11 +23,11 @@ public class VigenereCode extends CaesarCode {
 
     String key;
 
-    public VigenereCode(String key) {
+    public void setKey(String key) {
         this.key = key;
     }
 
-    public String codeMaker(String text) {
+    public String codeMaker(String text, boolean isDecipher) {
 
         // Убираем лишнее и разделяем на символы
         text = textWithoutOtherSymbol(text);
@@ -43,6 +43,8 @@ public class VigenereCode extends CaesarCode {
 
             // Сдвиг по символу шифрслова
             int step = cipherLetters[countAlphabet] - firstSymbol;
+            if (isDecipher)
+                step = -step;
 
             cipherLetter = alphabeticShift(c, step);
             cipherText = cipherText + cipherLetter;
@@ -54,6 +56,6 @@ public class VigenereCode extends CaesarCode {
                 countAlphabet = 0;
         }
 
-        return cipherText;
+        return cipherText.toUpperCase();
     }
 }
