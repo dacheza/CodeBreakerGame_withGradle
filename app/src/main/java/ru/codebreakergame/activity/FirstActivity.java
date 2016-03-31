@@ -131,6 +131,9 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
                     case R.id.loadAnotherSkinItemNavigationMenu:
                         Toast.makeText(getApplicationContext(), "Переключиться на другой скин"
                                 , Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(FirstActivity.this, /*FirstActivity*/MainMenuActivity.class);
+                        startActivity(intent);
+                        finish();
                         //showNotificationTab();
                         break;
                     case R.id.loadGameItemNavigationMenu:
