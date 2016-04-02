@@ -69,27 +69,13 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onClick(View v) {
                 Snackbar.make(coordinator, "ответ правильный", Snackbar.LENGTH_SHORT)
-                        .setAction(/*R.string.snackbar_action*/"ок", yes)
+                        .setAction("ок", yes)
                         .show();
             }
         });
 
         initToolbar();
         initNavigationView();
-
-//        код который был по умолчанию чтобы создать в RelativeLayout FloatingActionButton и toolbar
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-
         initCaesarCipherTable();
     }
 
@@ -171,7 +157,6 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         initEditText();
         initLetters();
         initUpAndDownButtons();
-        experimentWithTable();
     }
 
     private void initEditText() {
@@ -202,10 +187,6 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
-    private void experimentWithTable() {
-
-    }
-
     private void initUpAndDownButtons() {
         buttonUp0 = (ImageButton) findViewById(R.id.buttonUp00);
         buttonUp1 = (ImageButton) findViewById(R.id.buttonUp01);
@@ -221,8 +202,6 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         buttonDown1.setOnClickListener(this);
         buttonDown2.setOnClickListener(this);
     }
-
-
 
     private void animateLettersDown() {
 /*        Animation аnimationDown_1 = AnimationUtils.loadAnimation(this, R.anim.caesar_cipher_letter_down_1);
