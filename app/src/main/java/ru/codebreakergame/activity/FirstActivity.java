@@ -20,8 +20,6 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import ru.codebreakergame.R;
-
 public class FirstActivity extends AppCompatActivity implements View.OnClickListener {
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;

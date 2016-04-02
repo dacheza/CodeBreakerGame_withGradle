@@ -11,9 +11,6 @@ import android.view.animation.AnimationUtils;
 import com.romainpiel.shimmer.Shimmer;
 import com.romainpiel.shimmer.ShimmerTextView;
 
-
-//import ru.codebreakergame.R;
-
 /*
  * здесь внизу ссылка на мерцающий
  * текст http://developer.alexanderklimov.ru/android/views/textview.php

@@ -6,9 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-//import ru.codebreakergame.R;
-
-
 public class MainMenuActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

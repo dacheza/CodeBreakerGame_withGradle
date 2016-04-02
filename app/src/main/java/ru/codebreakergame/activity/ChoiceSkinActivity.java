@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-//import ru.codebreakergame.R;
-
 public class ChoiceSkinActivity extends Activity implements View.OnClickListener {
     Button buttonCitlalatonacSkin;
     Button buttonDachezaSkin;
