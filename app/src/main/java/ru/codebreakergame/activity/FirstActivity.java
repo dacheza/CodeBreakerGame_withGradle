@@ -187,6 +187,17 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         lettersArr0[3] = (TextView) findViewById(R.id.textView60);
         lettersArr0[4] = (TextView) findViewById(R.id.textView70);
 
+        lettersArr1[0] = (TextView) findViewById(R.id.textView31);
+        lettersArr1[1] = (TextView) findViewById(R.id.textView41);
+        lettersArr1[2] = (TextView) findViewById(R.id.textView51);
+        lettersArr1[3] = (TextView) findViewById(R.id.textView61);
+        lettersArr1[4] = (TextView) findViewById(R.id.textView71);
+
+        lettersArr2[0] = (TextView) findViewById(R.id.textView32);
+        lettersArr2[1] = (TextView) findViewById(R.id.textView42);
+        lettersArr2[2] = (TextView) findViewById(R.id.textView52);
+        lettersArr2[3] = (TextView) findViewById(R.id.textView62);
+        lettersArr2[4] = (TextView) findViewById(R.id.textView72);
         for (TextView textView : lettersArr0) {
         }
     }
@@ -214,11 +225,10 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
 
 
     private void animateLettersDown() {
-
-        Animation аnimationDown_1 = AnimationUtils.loadAnimation(this, R.anim.caesar_cipher_letter_down_1);
+/*        Animation аnimationDown_1 = AnimationUtils.loadAnimation(this, R.anim.caesar_cipher_letter_down_1);
         Animation аnimationDown_2 = AnimationUtils.loadAnimation(this, R.anim.caesar_cipher_letter_down_2);
         Animation аnimationDown_3 = AnimationUtils.loadAnimation(this, R.anim.caesar_cipher_letter_down_3);
-        Animation аnimationDown_4 = AnimationUtils.loadAnimation(this, R.anim.caesar_cipher_letter_down_4);
+        Animation аnimationDown_4 = AnimationUtils.loadAnimation(this, R.anim.caesar_cipher_letter_down_4);*/
         Animation аnimationDown_100 = AnimationUtils.loadAnimation(this, R.anim.caesar_cipher_letter_down);
 
         textView1.startAnimation(аnimationDown_100);
@@ -240,12 +250,12 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
                 setLettersUp(lettersArr0);
                 break;
             case R.id.buttonUp01:
-//                editTextPlus1(editText1);
-//                setLettersUp(lettersArr1);
+                editTextPlus1(editText1);
+                setLettersUp(lettersArr1);
                 break;
             case R.id.buttonUp02:
-//                editTextPlus1(editText2);
-//                setLettersUp(lettersArr2);
+                editTextPlus1(editText2);
+                setLettersUp(lettersArr2);
                 break;
 
             case R.id.buttonDown10:
@@ -253,12 +263,12 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
                 setLettersDown(lettersArr0);
                 break;
             case R.id.buttonDown11:
-//                editTextMinus1(editText1);
-//                setLettersDown(lettersArr1);
+                editTextMinus1(editText1);
+                setLettersDown(lettersArr1);
                 break;
             case R.id.buttonDown12:
-//                editTextMinus1(editText2);
-//                setLettersDown(lettersArr2);
+                editTextMinus1(editText2);
+                setLettersDown(lettersArr2);
                 break;
         }
     }
@@ -271,7 +281,6 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         } else {
             editText.setText(Integer.toString(++oldInt));
         }
-
     }
 
     private void editTextMinus1(EditText editText) {
